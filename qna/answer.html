@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0044)https://getbootstrap.com/examples/dashboard/ -->
 <html lang="en">
 
 <head>
@@ -10,21 +9,20 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-      <link rel="icon" href="image/logo.png">
+    <link rel="icon" href="image/logo.png">
 
     <title>CODINATION</title>
     <!-- Bootstrap core CSS -->
-    <link href="./Dashboard Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./CSS/bootstrap.min.css" rel="stylesheet">
+<!--    textarea 등-->
+    <link href="./CSS/answer.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="./Dashboard Template for Bootstrap_files/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="./Dashboard Template for Bootstrap_files/dashboard.css" rel="stylesheet">
+    <link href="./CSS/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./Dashboard Template for Bootstrap_files/ie-emulation-modes-warning.js"></script>
+    <script src="./JS/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -109,12 +107,12 @@
     </nav>
     <div class="editor-content">
         <textarea id="title" class="editable se_textarea" placeholder="제목" rows="1" onmou></textarea>
-        <textarea id="text" class="editable se_textarea" placeholder="소개에는 간략한 내용을 적습니다" rows="3"style="
+        <textarea id="text" class="editable se_textarea" placeholder="소개에는 간략한 내용을 적습니다" rows="3" style="
     border-bottom: none;height: 100px;
 "></textarea>
-        
-<!--        편집툴-->
-<!--
+
+        <!--        편집툴-->
+        <!--
         <br>
         <ul>
 
@@ -150,7 +148,7 @@
     </ul>
 -->
         <textarea id="text" class="editable se_textarea" placeholder="내용을 입력해 주세요" rows="1" onclick="turnRed()">
-        
+
         </textarea>
         <br>
         <div id="tagInfo"><span>태그</span><span id="tagsubInfo">최대 입력 10개</span></div>
@@ -160,154 +158,29 @@
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="./Dashboard Template for Bootstrap_files/jquery.min.js"></script>
+    <script src="./JS/jquery.min.js"></script>
     <script>
         window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')
     </script>
-    <script src="./Dashboard Template for Bootstrap_files/bootstrap.min.js"></script>
+    <script src="./JS/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    <script src="./Dashboard Template for Bootstrap_files/holder.min.js"></script>
+    <script src="./JS/holder.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./Dashboard Template for Bootstrap_files/ie10-viewport-bug-workaround.js"></script>
+    <script src="./JS/ie10-viewport-bug-workaround.js"></script>
 
 
     <script src="//code.jquery.com/jquery.min.js"></script>
-<script>
-    $(function () {
-        $("textarea.editable se_textarea").keyup(function () {
-            $(this).css("height", "1px").css("height", (20 + $(this).prop("scrollHeight")) + "px");
+    <script>
+        $(function () {
+            $("textarea.editable se_textarea").keyup(function () {
+                $(this).css("height", "1px").css("height", (20 + $(this).prop("scrollHeight")) + "px");
+            });
         });
-    });
-    $('.textarea').outclick(function() { alert('Clicked outside!') }
-</script>
-<style>
-     header {
-            margin-top: 0;
-            margin-left: 10%;
-            margin-right: 10%;
-            height: 50px;
-            background-color: #fff;
-            background-color: #fff;
-        }
-        
-    textarea {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        width: 50%;
-    }
+        $('.textarea').outclick(function () {
+                    alert('Clicked outside!')
+                }
+    </script>
     
-    .editor-content {
-        text-align: center;
-    }
-    
-    #title {
-        border: none;
-        padding-top: 20px;
-        height: 80px;
-        font-size: 30px;
-    }
-    #text{
-        font-size: 15px;
-        height: 400px;
-        border-right: none;
-        border-left: none;
-        border-color: #E6E6E6;
-    }
-    #tag{
-                border: none;
-
-        height: 100px;
-    }
-    #tagInfo{
-        text-align: left;
-        display: block;
-        margin: 0 auto;
-        width: 50%;
-    }
-    #tagsubInfo{
-        margin-left: 10px;
-        font-size: 12px;
-        color: #A6A6A6;
-    }
-    footer {
-            height: 100px;
-            background-color: #FD9F28;
-        }
-    .makePost {
-            margin-left: 10px;
-            color: #fff;
-            float: right;
-            border: none;
-            width: 60px;
-            height: 30px;
-        }
-        #save{
-            background-color: #fff;
-            color: #000;
-        }
-        #upload{
-            background-color: #35B973;
-        }
-    textarea:active {
-/*    background-color: yellow;*/
-}
-</style>
-    <!--edit tool-->
-<style>
-     ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-            overflow: hidden;
-        }
-        
-        li {
-            float: left;
-        }
-        
-        li a,
-        .dropbtn {
-            display: inline-block;
-            color: white;
-            text-align: center;
-            padding: 14px 16px;
-            text-decoration: none;
-        }
-        
-        li a:hover,
-        .dropdown:hover .dropbtn {
-            background-color: #35B973;
-        }
-        
-        li.dropdown {
-            display: inline-block;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-        }
-        
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-        
-        .dropdown-content a:hover {
-            background-color: #f1f1f1
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-</style>
 </body>
 
 </html>
