@@ -13,6 +13,8 @@
       <link rel="icon" href="image/logo.png">
 
     <title>CODINATION</title>
+        <link href="./CSS/navbar.css" rel="stylesheet">
+
     <!-- Bootstrap core CSS -->
     <link href="./CSS/bootstrap.min.css" rel="stylesheet">
 <!--    textarea 등-->
@@ -34,76 +36,75 @@
 
 <body>
     <nav class="navbar navbar-default" style="
-    background-color: #FD5830;margin: 0;
+    border: 0px;
+    background-color: #fff;
+    margin-bottom: 0px;
 ">
-        <div class="container-fluid">
+        <div class="container" style="
+    width: 100%;
+    padding: 0;
+    margin: 0;
+">
             <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
-                <a class="navbar-brand" href="#" style="
+            <div class="navbar-header" style="
+    margin: 0;
+    width: 100%;
+    background: #fd5830;
+">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" style="
+    margin-left: 15px;
+    float: left;
+    margin-right: 0;
+"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a class="navbar-brand" href="#" style="
+    margin-left: 5px;
     color: #fff;
-"><img src="image/logo.png" style="
-    display: initial;
+"><span><img style="
     width: 30px;
-    margin-right: 10px;
-">CODINATION</a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-                 <form class="navbar-form navbar-left" style="
+    margin-right: 5px;
+" id="logo" src="image/logo.png"></span>
+                CODINATION
+                </a>
+                <form class="navbar-form navbar-left" style="
+    border-radius: 3px;
     padding: 0;
     background-color: #fff;
     float: right;
+    margin-right: 2%;
+    ">
+                    <div class="form-group" style="
+    /* width: 90%; */
+    margin-bottom: 0;
+    display: inline-block;
+    background-color: white;
 ">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search" style="
-    border: none;
-">
-                    </div>
+                        <input type="text" class="form-control" placeholder="Search" style="border: none;"> </div>
                     <button type="submit" class="btn btn-default" style="
+    margin-top: 3px;
+    float: right;
     border: none;
-"><img src="image/search.png"></button>
+"> <img src="image/search.png"></button>
                 </form>
-
             </div>
-        </div>
-    </nav>
-    <nav class="navbar navbar-default" style="
-    background-color: #fff;
-">
-        <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
-
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" aria-expanded="false" style="padding-left: 30px;border: 10px;">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">시리즈 <span class="sr-only">(current)</span></a></li>
+                    <li class="active"><a href="#">시리즈 <span class="sr-only">(current)</span></a></li>
                     <li><a href="#">사전</a></li>
-                    <li><a href="#">Q&A</a></li>
+                    <li><a href="#">Q&amp;A</a></li>
                     <li><a href="#">블로그</a></li>
                     <li><a href="#">MY</a></li>
                 </ul>
-                <ul class="nav navbar-nav" style="
-    float: right;
-">
+                <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a href="#"><img src="image/user.png" style="
     height: 20px;
     margin-right: 5px;
-">구자민 <span class="sr-only">(current)</span></a>
+">구자민 </a>
                     </li>
                     <li><a href="#">질문하기</a></li>
                 </ul>
-
             </div>
+            <!-- /.navbar-collapse -->
         </div>
     </nav>
     <div id="qna-container" style="
